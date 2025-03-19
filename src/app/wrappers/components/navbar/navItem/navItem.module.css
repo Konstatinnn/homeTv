@@ -1,0 +1,41 @@
+.navBarItem {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	position: relative; /* Добавляем позиционирование */
+
+	cursor: pointer;
+	transition: color 0.3s ease; /* Плавное изменение цвета текста */
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.navBarItem::after {
+	content: '';
+	position: absolute;
+	left: -10px; /* Располагаем справа */
+	top: 0;
+
+	height: 100%; /* Высота на весь элемент */
+	width: 3px; /* Ширина полоски */
+	background-color: red;
+	transform: scaleY(0); /* Изначально скрыта */
+	transition: transform 0.3s ease; /* Плавное появление */
+	margin-right: -5px; /* Отступ в 5px от элемента */
+}
+
+/* Показываем полоску при ховере */
+.navBarItem:hover::after {
+	transform: scaleY(1);
+}
+
+/* Для активного элемента */
+.navBarItem.active {
+	background-color: #3f3f3fb6; /* Меняем цвет текста для активного элемента */
+}
+
+/* Оставляем полоску видимой для активного элемента */
+.navBarItem.active::after {
+	transform: scaleY(1);
+}

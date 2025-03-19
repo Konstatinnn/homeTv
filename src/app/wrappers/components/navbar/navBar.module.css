@@ -1,0 +1,13 @@
+.navBar {
+	min-width: 23%;
+}
+
+.title {
+	margin-bottom: 10px;
+	color: rgb(160, 144, 144);
+}
+
+.navBarWrapper {
+	display: flex;
+	flex-direction: column;
+}
