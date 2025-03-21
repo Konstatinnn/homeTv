@@ -16,6 +16,24 @@ export const theme = createTheme({
 			main: '#dc004e',
 		},
 	},
+	components: {
+		MuiTabs: {
+			styleOverrides: {
+				indicator: {
+					backgroundColor: 'red',
+				},
+			},
+		},
+		MuiTab: {
+			styleOverrides: {
+				root: {
+					'&.Mui-selected': {
+						color: '#fff',
+					},
+				},
+			},
+		},
+	},
 });
 
 export default function ThemeRegistry({ children }: { children: ReactNode }) {

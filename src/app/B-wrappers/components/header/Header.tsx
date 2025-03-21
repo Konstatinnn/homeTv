@@ -1,16 +1,17 @@
 import React from 'react';
-import s from './header.module.css';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ChatIcon from '@mui/icons-material/Chat';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import MenuPopupState from './accountMenu/AccountMenu';
 
 import Icon from '../../../../../public/money.svg';
 import { InputAdornment, TextField } from '@mui/material';
+
+import s from './header.module.css';
 
 export const Header = () => {
 	return (
@@ -33,7 +34,6 @@ export const Header = () => {
 					size="small"
 					placeholder="Search"
 					slotProps={{
-						// Настройка входного поля с иконкой в конце
 						input: {
 							startAdornment: (
 								<InputAdornment position="start">
@@ -53,17 +53,11 @@ export const Header = () => {
 			</div>
 			<div className={s.userinfo}>
 				<div className={s.notifications}>
-					<NotificationsIcon fontSize="small" />
-					<ChatIcon fontSize="small" />
+					<DarkModeIcon className={s.darkModeIcon} fontSize="small" />
+					<NotificationsIcon className={s.notificationsIcon} fontSize="small" />
+					<ChatIcon className={s.chatIcon} fontSize="small" />
 				</div>
-				<div className={s.account}>
-					<AccountCircleIcon fontSize="large" />
-					<div className={s.user}>
-						<div>Андрей</div>
-						<div>Тигранович</div>
-						<ArrowDropDownIcon />
-					</div>
-				</div>
+				<MenuPopupState />
 			</div>
 		</div>
 	);

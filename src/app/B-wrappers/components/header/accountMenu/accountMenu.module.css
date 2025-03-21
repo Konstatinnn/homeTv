@@ -1,0 +1,11 @@
+.account {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+
+	cursor: pointer;
+}
+
+.accountCircleIcon {
+	margin-right: 10px;
+}

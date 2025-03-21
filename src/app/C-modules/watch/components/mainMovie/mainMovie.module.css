@@ -1,0 +1,54 @@
+.mainMovie {
+	max-height: 350px;
+	border-radius: 15px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 10px;
+}
+.img {
+	max-width: 100%;
+	z-index: -5;
+	object-fit: cover;
+}
+
+.playIcon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	cursor: pointer;
+}
+
+.watchButton {
+	cursor: pointer;
+	background-color: red;
+	color: #fff;
+	padding: 15px 25px;
+	z-index: 5;
+	font-size: 16px;
+	border: none;
+	border-radius: 15px;
+	font-weight: bold;
+}
+.mainMovieActions {
+	display: inline-flex;
+	gap: 15px;
+	position: absolute;
+	cursor: pointer;
+	bottom: 15%;
+	left: 5%;
+}
+
+.addToWatchList {
+	cursor: pointer;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	background-color: rgba(196, 181, 181, 0.753);
+	border-radius: 15px;
+}

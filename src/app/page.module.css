@@ -167,3 +167,12 @@ a.secondary {
     filter: invert();
   }
 }
+
+
+.container {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1120px;
+	flex-direction: column;
+
+}
